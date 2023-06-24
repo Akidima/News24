@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>168937687930-ogavl4ugli8hf9723nv1teod73r52imv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.168937687930-ogavl4ugli8hf9723nv1teod73r52imv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMj_qUb-K7ZR-AjoP3859PAZaENMAQiNM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>168937687930</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>George.News24</string>
+	<key>PROJECT_ID</key>
+	<string>news24-3eb36</string>
+	<key>STORAGE_BUCKET</key>
+	<string>news24-3eb36.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:168937687930:ios:a4b7d25015f108052ea4c3</string>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-news24-dev-42020-authRole",
+      "UnauthRoleArn": "arn:aws:iam::407341614432:role/amplify-news24-dev-42020-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::407341614432:role/amplify-news24-dev-42020-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-news24-dev-42020-deployment",
+      "UnauthRoleName": "amplify-news24-dev-42020-unauthRole",
+      "StackName": "amplify-news24-dev-42020",
+      "StackId": "arn:aws:cloudformation:us-east-2:407341614432:stack/amplify-news24-dev-42020/68374730-0a62-11ee-a31e-06633081da5b",
+      "AmplifyAppId": "d1g05a96j1mlte"
+    },
+    "categories": {
+      "auth": {
+        "news24e71066d3": {}
+      }
+    }
+  }
+}
