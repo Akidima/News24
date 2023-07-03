@@ -12,26 +12,31 @@ struct ArticleListView: View {
     @State private var selectedArticle: Article?
     
     var body: some View {
+        
+        NavigationView {
         List{
             ForEach(articles) { article in
                 ArticleRowView(article: article)
                     .onTapGesture {
                         selectedArticle = article
                     }
-            }.listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                .listRowSeparator(.visible, edges: .bottom)
+            }.listRowSeparator(.visible, edges: .bottom)
         }
         .listStyle(.plain)
         .sheet(item: $selectedArticle) {
             SafariView(url: $0.articleURL)
                 .edgesIgnoringSafeArea(.bottom)
         }
+            
+        }
     }
 }
 
-#Preview {
-    NavigationView{
-        ArticleListView(articles: Article.previewData)
+struct ArticleListView_Previews: PreviewProvider{
+    static var previews: some View {
+        NavigationView {
+            ArticleListView(articles: Article.previewData)
+                
+        }
     }
-    
 }
