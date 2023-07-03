@@ -21,7 +21,7 @@ struct SessionView: View {
             TabView {
                 NewsTabView()
                     .tabItem {
-                        Label("News", systemImage: "newspaper")
+                        Image(systemName: "house")
                             
                     }
             }.accentColor(Color.black)
