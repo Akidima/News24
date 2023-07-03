@@ -53,20 +53,22 @@ struct ArticleRowView: View {
                 }
                 
             }
-            .frame(width: 120, height: 120)
+            .frame(width: 100, height: 100)
             .background(Color.gray.opacity(0.3))
             .cornerRadius(10)
             
             VStack(alignment: .leading , spacing: 4){
                 Text(article.title)
                     .foregroundStyle(.black)
-                    .font(.system(size: 20, weight: .semibold))
+                    .font(.system(size: 18, weight: .semibold))
                
                 
                 HStack{
                     Text(article.sourceText)
-                        .foregroundStyle(.gray)
+                        .lineLimit(1)
                         .font(.footnote)
+                        .foregroundColor(.secondary)
+
                     
                     
                     
@@ -100,14 +102,16 @@ struct ArticleRowView: View {
 
 
 
-#Preview {
-    NavigationView{
-        List{
-            ArticleRowView(article: .previewData[0])
-                .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                .previewLayout(.sizeThatFits)
+struct ArticleRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView{
+            List{
+                ArticleRowView(article: .previewData[0])
+                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .previewLayout(.sizeThatFits)
+            }
+            .listStyle(.plain)
         }
-        .listStyle(.plain)
     }
     
 }
