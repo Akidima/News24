@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import URLImage
+
+fileprivate let relativeDateFormatter = RelativeDateTimeFormatter()
 
 extension Article: Codable {}
 extension Article: Equatable {}
@@ -55,7 +56,9 @@ struct Article{
     }
     
     var sourceText: String {
-        "\(source.name)"
+        let trimmedName = source.name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let relativeDateString = relativeDateFormatter.localizedString(for: publishedAt, relativeTo: Date())
+        return "\(trimmedName) . \(relativeDateString)"
     }
    
    
