@@ -6,25 +6,26 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct EmptyPlaceholder: View {
     let text: String
-    let image: Image?
+    let imageName: String
     
     var body: some View {
         VStack(spacing: 8) {
             Spacer()
-            if let image = self.image {
-                image
-                    .imageScale(.large)
-                    .font(.system(size: 52))
-            }
+            
+            LottieView(animationFile: imageName)
+                .frame(width: 200, height: 200)
             Text(text)
             Spacer()
         }
     }
 }
 
-#Preview {
-    EmptyPlaceholder()
+struct EmptyPlaceholder_Previews: PreviewProvider {
+    static var previews: some View {
+        EmptyPlaceholder(text: "No bookmarks", imageName: "Bookmark")
+    }
 }
