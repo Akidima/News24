@@ -12,6 +12,8 @@ import SwiftUI
 
 @main
 struct News24App: App {
+    @StateObject var articleBookmarkVM = ArticleBookMarkVM.shared
+    
     @ObservedObject var sessionManager = SessionManager()
     
     init() {
@@ -36,6 +38,7 @@ struct News24App: App {
             case .session(let user):
                 SessionView(user: user)
                     .environmentObject(sessionManager)
+                    .environmentObject(articleBookmarkVM)
                 
             
             }
