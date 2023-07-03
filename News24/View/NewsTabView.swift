@@ -12,32 +12,39 @@ struct NewsTabView: View {
     
     
     var body: some View {
-        NavigationView {
-            ArticleListView(articles: articles)
-                .onAppear {
-                    Task {
-                      await articleNewsVM.loadArticles()
+        VStack{
+            NavigationView {
+                ArticleListView(articles: articles)
+                    .overlay(overlayView)
+                    .refreshable {
+                        
                     }
-                }
-                .navigationTitle(articleNewsVM.selectedCategory.text)
-            
+                    .onAppear {
+                        Task {
+                            await articleNewsVM.loadArticles()
+                        }
+                    }
+                    .navigationTitle(articleNewsVM.selectedCategory.text)
+            }
         }
     }
     
     @ViewBuilder
     private var overlayView: some View {
-        Group {
-            switch articleNewsVM.phase  {
+        
+    switch articleNewsVM.phase  {
                 
-            case .empty: ProgressView()
+    case .empty:
+         ProgressView()
             
-            case .success(let articles) where where articles.isEmpty:
-                
-            default: EmptyView()
-                
-            }
-        }
+    case .success(let articles) where articles.isEmpty:
+        EmptyPlaceholder(text: "No articles found", imageName: "No-Article")
+
+    case .failure(let error):  RetryView(text: error.localizedDescription) {
     }
+        default: EmptyView()
+    }
+}
     
     private var articles:[Article] {
         if case let .success(articles) = articleNewsVM.phase {
@@ -49,6 +56,8 @@ struct NewsTabView: View {
 }
 
 
-#Preview {
-    NewsTabView(articleNewsVM: ArticleNewsVM(articles: Article.previewData))
+struct NewsTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        NewsTabView(articleNewsVM: ArticleNewsVM(articles: Article.previewData))
+    }
 }
