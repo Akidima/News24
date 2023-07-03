@@ -22,8 +22,9 @@ struct SessionView: View {
                 NewsTabView()
                     .tabItem {
                         Label("News", systemImage: "newspaper")
+                            
                     }
-            }
+            }.accentColor(Color.black)
             Spacer()
             Button(action: {sessionManager.signOut()}) {
                 Text("Log Out")
