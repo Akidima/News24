@@ -37,16 +37,16 @@ class ArticleNewsVM: ObservableObject {
     
     func loadArticles() async {
         phase = .success(Article.previewData)
-//        if Task.isCancelled { return }
-//        phase = .empty
-//        do {
-//            let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
-//            if Task.isCancelled { return }
-//            phase = .success(articles)
-//        } catch {
-//            if Task.isCancelled { return }
-//            print(error.localizedDescription)
-//            phase = .failure(error)
-//        }
+       if Task.isCancelled { return }
+        phase = .empty
+        do {
+            let articles = try await newsAPI.fetch(from: fetchTaskToken.category)
+            if Task.isCancelled { return }
+            phase = .success(articles)
+        } catch {
+            if Task.isCancelled { return }
+            print(error.localizedDescription)
+            phase = .failure(error)
+        }
     }
 }
