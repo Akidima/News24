@@ -10,9 +10,9 @@ import ExytePopupView
 import SwiftUI
 
 struct SessionView: View {
-    
     @EnvironmentObject var sessionManager: SessionManager
     
+   
     let user: AuthUser
     
     @State var showingPop = false
@@ -23,6 +23,10 @@ struct SessionView: View {
                     .tabItem {
                         Image(systemName: "house")
                             
+                    }
+                BookmarkTabView()
+                    .tabItem {
+                        Image(systemName: "bookmark")
                     }
             }.accentColor(Color.black)
             Spacer()
@@ -52,5 +56,6 @@ struct SessionView_Previews: PreviewProvider {
     
     static var previews: some View {
         SessionView(user: DummyUser())
+            .environmentObject(ArticleBookMarkVM.shared)
     }
 }
