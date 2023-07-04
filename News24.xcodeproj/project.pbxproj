@@ -16,7 +16,6 @@
 		060334BB2A3935CA00F40E22 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060334BA2A3935CA00F40E22 /* SessionView.swift */; };
 		0612881A2A4C34010044CE34 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061288192A4C34010044CE34 /* SplashScreen.swift */; };
 		062044942A431CEE007E7526 /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062044932A431CEE007E7526 /* ArticleRowView.swift */; };
-		062044992A43447F007E7526 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062044982A43447F007E7526 /* ActivityView.swift */; };
 		0620449B2A4350C5007E7526 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0620449A2A4350C5007E7526 /* ArticleListView.swift */; };
 		0620449D2A4370EF007E7526 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0620449C2A4370EF007E7526 /* SafariView.swift */; };
 		062044A02A437AB7007E7526 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0620449F2A437AB7007E7526 /* NewsAPI.swift */; };
@@ -31,6 +30,8 @@
 		063ACA702A53035000B7B7A3 /* Bookmark.json in Resources */ = {isa = PBXBuildFile; fileRef = 063ACA6F2A53035000B7B7A3 /* Bookmark.json */; };
 		063ACA742A53169B00B7B7A3 /* CustomSegementedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063ACA732A53169B00B7B7A3 /* CustomSegementedPicker.swift */; };
 		063ACA762A53476E00B7B7A3 /* ArticleBookMarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063ACA752A53476E00B7B7A3 /* ArticleBookMarkVM.swift */; };
+		063ACA782A53862400B7B7A3 /* BookmarkTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063ACA772A53862400B7B7A3 /* BookmarkTabView.swift */; };
+		063ACA7A2A538FBA00B7B7A3 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063ACA792A538FBA00B7B7A3 /* DataStore.swift */; };
 		064E45E32A3F5B750014E391 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E45E22A3F5B750014E391 /* OnboardingView.swift */; };
 		064E45E52A3F5E8F0014E391 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E45E42A3F5E8F0014E391 /* LottieView.swift */; };
 		064E45E72A3F664C0014E391 /* animation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 064E45E62A3F664B0014E391 /* animation2.json */; };
@@ -57,7 +58,6 @@
 		061288192A4C34010044CE34 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		062044932A431CEE007E7526 /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		062044952A432B97007E7526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		062044982A43447F007E7526 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		0620449A2A4350C5007E7526 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 		0620449C2A4370EF007E7526 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		0620449F2A437AB7007E7526 /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		063ACA6F2A53035000B7B7A3 /* Bookmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bookmark.json; sourceTree = "<group>"; };
 		063ACA732A53169B00B7B7A3 /* CustomSegementedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegementedPicker.swift; sourceTree = "<group>"; };
 		063ACA752A53476E00B7B7A3 /* ArticleBookMarkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleBookMarkVM.swift; sourceTree = "<group>"; };
+		063ACA772A53862400B7B7A3 /* BookmarkTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTabView.swift; sourceTree = "<group>"; };
+		063ACA792A538FBA00B7B7A3 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		064E45E22A3F5B750014E391 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		064E45E42A3F5E8F0014E391 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		064E45E62A3F664B0014E391 /* animation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation2.json; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				06299B482A407B8C00D3F573 /* Article.swift */,
 				06299B4A2A40849700D3F573 /* NewsAPIResponse.swift */,
 				062044A12A437BD5007E7526 /* Category.swift */,
+				063ACA792A538FBA00B7B7A3 /* DataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				064E45EE2A3F69E70014E391 /* Animation */,
-				062044982A43447F007E7526 /* ActivityView.swift */,
 				060334BA2A3935CA00F40E22 /* SessionView.swift */,
 				062044932A431CEE007E7526 /* ArticleRowView.swift */,
 				060334B82A392BE200F40E22 /* ConfirmationView.swift */,
@@ -202,6 +204,7 @@
 				063579992A47BCA8001E9BDF /* RetryView.swift */,
 				061288192A4C34010044CE34 /* SplashScreen.swift */,
 				063ACA732A53169B00B7B7A3 /* CustomSegementedPicker.swift */,
+				063ACA772A53862400B7B7A3 /* BookmarkTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0612881A2A4C34010044CE34 /* SplashScreen.swift in Sources */,
-				062044992A43447F007E7526 /* ActivityView.swift in Sources */,
+				063ACA7A2A538FBA00B7B7A3 /* DataStore.swift in Sources */,
 				060334AB2A391AA700F40E22 /* LoginView.swift in Sources */,
 				066BAF5A2A43936800365511 /* NewsTabView.swift in Sources */,
 				066BAF582A43852D00365511 /* ArticleNewsVM.swift in Sources */,
@@ -371,6 +374,7 @@
 				0620449D2A4370EF007E7526 /* SafariView.swift in Sources */,
 				060334B92A392BE200F40E22 /* ConfirmationView.swift in Sources */,
 				060334A92A391AA700F40E22 /* News24App.swift in Sources */,
+				063ACA782A53862400B7B7A3 /* BookmarkTabView.swift in Sources */,
 				062044A02A437AB7007E7526 /* NewsAPI.swift in Sources */,
 				06299B4B2A40849700D3F573 /* NewsAPIResponse.swift in Sources */,
 				064E45E32A3F5B750014E391 /* OnboardingView.swift in Sources */,
