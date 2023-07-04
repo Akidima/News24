@@ -21,6 +21,8 @@ extension View {
 
 struct ArticleRowView: View {
  
+    
+    @EnvironmentObject var articleBookmarkVM: ArticleBookMarkVM
     let article: Article
    
     @State  var isToogle: Bool = false
@@ -85,9 +87,13 @@ struct ArticleRowView: View {
                                     Text("Share")
                                     Image(systemName: "square.and.arrow.up")
                                 }
-                                Button(action: {}) {
-                                    Text("Bookmark")
-                                    Image(systemName: "bookmark")
+                                Button {
+                                    toggleBookmark(for: article)
+                                } label: {
+                                    VStack(spacing: 4) {
+                                        Text("Bookmark")
+                                        Image(systemName: articleBookmarkVM.isBookmarked(for: article) ? "bookmark.fill" : "bookmark")
+                                    }
                                 }
                             }
                             
@@ -96,6 +102,13 @@ struct ArticleRowView: View {
                 }
             }
         }
+    private func toggleBookmark(for article: Article) {
+        if articleBookmarkVM.isBookmarked(for: article) {
+            articleBookmarkVM.removeBookmark(for: article)
+        } else {
+            articleBookmarkVM.addBookmark(for: article)
+        }
+    }
     }
 
 
@@ -103,6 +116,8 @@ struct ArticleRowView: View {
 
 
 struct ArticleRowView_Previews: PreviewProvider {
+    @StateObject static  var articleBookVM = ArticleBookMarkVM.shared
+    
     static var previews: some View {
         NavigationView{
             List{
@@ -112,6 +127,7 @@ struct ArticleRowView_Previews: PreviewProvider {
             }
             .listStyle(.plain)
         }
+        .environmentObject(articleBookVM)
     }
     
 }
