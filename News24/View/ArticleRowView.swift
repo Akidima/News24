@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+//Acitivty Controller
 extension View {
     
     func presentShareSheet(url: URL) {
@@ -60,13 +61,13 @@ struct ArticleRowView: View {
             .cornerRadius(10)
             
             VStack(alignment: .leading , spacing: 4){
-                Text(article.title)
+                Text(article.title.cw_localized)
                     .foregroundStyle(.black)
                     .font(.system(size: 18, weight: .semibold))
                
                 
                 HStack{
-                    Text(article.sourceText)
+                    Text(article.sourceText.cw_localized)
                         .lineLimit(1)
                         .font(.footnote)
                         .foregroundColor(.secondary)
@@ -84,14 +85,14 @@ struct ArticleRowView: View {
                                 Button(action: {
                                     presentShareSheet(url: article.articleURL)
                                 }) {
-                                    Text("Share")
+                                    Text("Share".cw_localized)
                                     Image(systemName: "square.and.arrow.up")
                                 }
                                 Button {
                                     toggleBookmark(for: article)
                                 } label: {
                                     VStack(spacing: 4) {
-                                        Text("Bookmark")
+                                        Text(articleBookmarkVM.isBookmarked(for: article) ? "Bookmarked".cw_localized : "Not Bookmarked".cw_localized)
                                         Image(systemName: articleBookmarkVM.isBookmarked(for: article) ? "bookmark.fill" : "bookmark")
                                     }
                                 }

@@ -24,10 +24,12 @@ final class SessionManager: ObservableObject {
             authState = .login
         }
     }
-    
+    //Function for SignUp
     func showSignUp() {
         authState = .signup
     }
+    
+    //function for SignIn
     func showLogin() {
         authState = .login
     }

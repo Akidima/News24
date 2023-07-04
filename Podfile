@@ -11,8 +11,7 @@ target 'News24' do
     pod 'lottie-ios'
     pod 'SwiftLint'
     pod 'ExytePopupView'
-    pod 'Popovers'
-
+    pod 'CrowdinSDK'
 
 
 end

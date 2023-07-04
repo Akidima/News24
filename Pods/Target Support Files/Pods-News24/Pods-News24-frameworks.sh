@@ -184,8 +184,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSPluginsCore/AWSPluginsCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Amplify/Amplify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BaseAPI/BaseAPI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CrowdinSDK/CrowdinSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ExytePopupView/ExytePopupView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Popovers/Popovers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -197,8 +198,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSPluginsCore/AWSPluginsCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Amplify/Amplify.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BaseAPI/BaseAPI.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CrowdinSDK/CrowdinSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ExytePopupView/ExytePopupView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Popovers/Popovers.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

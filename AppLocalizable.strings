@@ -1,0 +1,9 @@
+/* 
+  AppLocalizable.strings
+  News24
+
+  Created by GA on 06/07/2023.
+  
+*/
+"app_title" = "News24";
+"download_button_text" = "Download Picture";

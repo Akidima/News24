@@ -7,6 +7,7 @@
 
 import Amplify
 import AmplifyPlugins
+import CrowdinSDK
 import SwiftUI
 
 
@@ -20,6 +21,25 @@ struct News24App: App {
         configureAmplify()
         sessionManager.getCurrentAuthUser()
     }
+    class AppDelegate: NSObject, UIApplicationDelegate{
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions lauchOptions:
+                         [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+                setUpCrowdinSDK()
+                return true
+        }
+        func setUpCrowdinSDK() {
+            let crowdinProviderConfig = CrowdinProviderConfig(hashString: "b39ed928fca86afafd4e849gwwv", sourceLanguage: "en")
+            let config = CrowdinSDKConfig.config().with(crowdinProviderConfig: crowdinProviderConfig)
+            
+            CrowdinSDK.startWithConfig(config) {
+                print("Added Successfully")
+            }
+            
+        }
+        
+    }
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             switch sessionManager.authState{
