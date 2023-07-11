@@ -24,12 +24,12 @@ final class SessionManager: ObservableObject {
             authState = .login
         }
     }
-    //Function for SignUp
+    //MARK: SignUp Function
     func showSignUp() {
         authState = .signup
     }
     
-    //function for SignIn
+    //MARK: Login
     func showLogin() {
         authState = .login
     }
@@ -67,6 +67,7 @@ final class SessionManager: ObservableObject {
             }
         }
     }
+  //MARK: Confimation Code
     func confirm(username: String, code: String) {
         _ = Amplify.Auth.confirmSignUp(
             for: username,
@@ -86,6 +87,8 @@ final class SessionManager: ObservableObject {
             }
         }
     }
+
+  //MARK: Login
     func login(username: String, password: String){
         _ = Amplify.Auth.signIn(
             username: username,
@@ -107,6 +110,7 @@ final class SessionManager: ObservableObject {
             }
         }
     }
+  // MARK:  SignOut Function
     func signOut() {
         _ = Amplify.Auth.signOut { [weak self] result in
             switch result {
@@ -119,22 +123,36 @@ final class SessionManager: ObservableObject {
             }
         }
     }
-    
-    func resetPassword(username: String) {
-            Amplify.Auth.resetPassword(for: username) { [weak self] result in
-                switch result {
-                case .success(let resetResult):
-                    print("Reset password result:", resetResult)
-                    DispatchQueue.main.async {
-                        self?.getCurrentAuthUser()
-                    }
-                    // Handle success case
-                    
-                case .failure(let error):
-                    print("Reset password error:", error)
-                    // Handle failure case
-                }
-            }
+
+  // MARK: - Reset Password
+  func deleteUser() {
+    _ = Amplify.Auth.deleteUser {[weak self] result in
+      switch result {
+      case .success:
+        DispatchQueue.main.async {
+          self?.getCurrentAuthUser()
         }
+      case .failure(let error):
+        print("Delete User Error:", error)
+      }
+    }
+  }
+  // MARK: - Reset Code
+  func resetCode(username: String) {
+      Amplify.Auth.resendSignUpCode(for: username) { [weak self] result in
+          switch result {
+          case .success(let resendResult):
+              print("Reset code result:", resendResult)
+            DispatchQueue.main.async {
+              self?.getCurrentAuthUser()
+            }
+
+          case .failure(let error):
+              print("Reset code error:", error)
+          }
+      }
+  }
+
+
 }
 
