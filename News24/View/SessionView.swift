@@ -12,8 +12,8 @@ import SwiftUI
 struct SessionView: View {
     @EnvironmentObject var sessionManager: SessionManager
     
-   
-    let user: AuthUser
+  let user: AuthUser
+
     
     @State var showingPop = false
     var body: some View {
@@ -28,33 +28,31 @@ struct SessionView: View {
                     .tabItem {
                         Image(systemName: "bookmark")
                     }
+
+              SearchTabView()
+                .tabItem {
+                  Image(systemName: "magnifyingglass")
+                }
+
+              SettingsView(user: user)
+                .tabItem {
+                  Image(systemName: "gearshape.fill")
+                }
+
             }.accentColor(Color.black)
-            Spacer()
-            Button(action: {sessionManager.signOut()}) {
-                Text("Log Out")
-                    .font(.system(size: 20))
-                    .font(.system(.headline, design: .rounded))
-                    .fontWeight(.heavy)
-                    .frame(width: 90, height: 30)
-            }.tint(Color.black)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.roundedRectangle(radius: 30))
-            .padding(.top, 20)
-            
-            
         }
        
     }
 }
 
 struct SessionView_Previews: PreviewProvider {
-   private struct DummyUser: AuthUser {
-        let userId: String = "1"
-        let username: String = "dummy"
-        
-    }
-    
-    static var previews: some View {
+  private struct DummyUser: AuthUser {
+       let userId: String = "1"
+       let username: String = "dummy"
+
+   }
+
+  static var previews: some View {
         SessionView(user: DummyUser())
             .environmentObject(ArticleBookMarkVM.shared)
     }
