@@ -62,7 +62,7 @@ struct ArticleRowView: View {
             
             VStack(alignment: .leading , spacing: 4){
                 Text(article.title.cw_localized)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color("TextColor"))
                     .font(.system(size: 18, weight: .semibold))
                
                 
