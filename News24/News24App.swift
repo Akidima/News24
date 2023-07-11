@@ -56,7 +56,7 @@ struct News24App: App {
                     .environmentObject(sessionManager)
                 
             case .session(let user):
-                SessionView(user: user)
+              SessionView(user: user)
                     .environmentObject(sessionManager)
                     .environmentObject(articleBookmarkVM)
                 
