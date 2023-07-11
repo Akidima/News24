@@ -39,6 +39,11 @@
 		066BAF582A43852D00365511 /* ArticleNewsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BAF572A43852D00365511 /* ArticleNewsVM.swift */; };
 		066BAF5A2A43936800365511 /* NewsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BAF592A43936800365511 /* NewsTabView.swift */; };
 		06A5357C2A39735800B70F2C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5357B2A39735800B70F2C /* SessionManager.swift */; };
+		06E50FBB2A5AD360008C4C91 /* SearchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E50FBA2A5AD360008C4C91 /* SearchTabView.swift */; };
+		06E50FBD2A5AD3AE008C4C91 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E50FBC2A5AD3AE008C4C91 /* SettingsView.swift */; };
+		06E50FC52A5B12E4008C4C91 /* ArticleSearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E50FC42A5B12E4008C4C91 /* ArticleSearchVM.swift */; };
+		06E50FC72A5B1826008C4C91 /* Search.json in Resources */ = {isa = PBXBuildFile; fileRef = 06E50FC62A5B1826008C4C91 /* Search.json */; };
+		06E50FC92A5B1D55008C4C91 /* SearchHistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E50FC82A5B1D55008C4C91 /* SearchHistoryListView.swift */; };
 		14DAC27DC3AE02CD8A7DCBA1 /* Pods_News24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28080B75630666C5B412A7BA /* Pods_News24.framework */; };
 		506D89D0A628B56F6E270350 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = EA15E3340A64B981E35286ED /* amplifyconfiguration.json */; };
 		833CD178652107B4CE203D54 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BC467C8E0D6168407B0F0BB /* awsconfiguration.json */; };
@@ -79,6 +84,11 @@
 		066BAF572A43852D00365511 /* ArticleNewsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleNewsVM.swift; sourceTree = "<group>"; };
 		066BAF592A43936800365511 /* NewsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTabView.swift; sourceTree = "<group>"; };
 		06A5357B2A39735800B70F2C /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		06E50FBA2A5AD360008C4C91 /* SearchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabView.swift; sourceTree = "<group>"; };
+		06E50FBC2A5AD3AE008C4C91 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		06E50FC42A5B12E4008C4C91 /* ArticleSearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchVM.swift; sourceTree = "<group>"; };
+		06E50FC62A5B1826008C4C91 /* Search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Search.json; path = ../../../../../../../Downloads/Search.json; sourceTree = "<group>"; };
+		06E50FC82A5B1D55008C4C91 /* SearchHistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryListView.swift; sourceTree = "<group>"; };
 		1CE84F2A94C9D421702C1D28 /* Pods-News24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News24.debug.xcconfig"; path = "Target Support Files/Pods-News24/Pods-News24.debug.xcconfig"; sourceTree = "<group>"; };
 		28080B75630666C5B412A7BA /* Pods_News24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC467C8E0D6168407B0F0BB /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -153,6 +163,7 @@
 		064E45EE2A3F69E70014E391 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				06E50FC62A5B1826008C4C91 /* Search.json */,
 				063ACA6F2A53035000B7B7A3 /* Bookmark.json */,
 				063ACA6D2A53011600B7B7A3 /* No-Article.json */,
 				064E45EA2A3F69D20014E391 /* animation3.json */,
@@ -167,6 +178,7 @@
 			children = (
 				066BAF572A43852D00365511 /* ArticleNewsVM.swift */,
 				063ACA752A53476E00B7B7A3 /* ArticleBookMarkVM.swift */,
+				06E50FC42A5B12E4008C4C91 /* ArticleSearchVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,6 +213,9 @@
 				063579992A47BCA8001E9BDF /* RetryView.swift */,
 				063ACA732A53169B00B7B7A3 /* CustomSegementedPicker.swift */,
 				063ACA772A53862400B7B7A3 /* BookmarkTabView.swift */,
+				06E50FBA2A5AD360008C4C91 /* SearchTabView.swift */,
+				06E50FBC2A5AD3AE008C4C91 /* SettingsView.swift */,
+				06E50FC82A5B1D55008C4C91 /* SearchHistoryListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +311,7 @@
 			files = (
 				064E45F02A3F8A5F0014E391 /* news.json in Resources */,
 				064E45ED2A3F69DD0014E391 /* animation1.json in Resources */,
+				06E50FC72A5B1826008C4C91 /* Search.json in Resources */,
 				060334B02A391AAA00F40E22 /* Preview Assets.xcassets in Resources */,
 				064E45E72A3F664C0014E391 /* animation2.json in Resources */,
 				060334AD2A391AAA00F40E22 /* Assets.xcassets in Resources */,
@@ -367,11 +383,15 @@
 				060334B92A392BE200F40E22 /* ConfirmationView.swift in Sources */,
 				060334A92A391AA700F40E22 /* News24App.swift in Sources */,
 				063ACA782A53862400B7B7A3 /* BookmarkTabView.swift in Sources */,
+				06E50FBD2A5AD3AE008C4C91 /* SettingsView.swift in Sources */,
 				062044A02A437AB7007E7526 /* NewsAPI.swift in Sources */,
+				06E50FBB2A5AD360008C4C91 /* SearchTabView.swift in Sources */,
 				06299B4B2A40849700D3F573 /* NewsAPIResponse.swift in Sources */,
 				064E45E32A3F5B750014E391 /* OnboardingView.swift in Sources */,
 				06299B492A407B8C00D3F573 /* Article.swift in Sources */,
+				06E50FC52A5B12E4008C4C91 /* ArticleSearchVM.swift in Sources */,
 				0620449B2A4350C5007E7526 /* ArticleListView.swift in Sources */,
+				06E50FC92A5B1D55008C4C91 /* SearchHistoryListView.swift in Sources */,
 				062044942A431CEE007E7526 /* ArticleRowView.swift in Sources */,
 				063ACA742A53169B00B7B7A3 /* CustomSegementedPicker.swift in Sources */,
 				0623CDDF2A45B5BF000862EC /* EmptyPlaceholder.swift in Sources */,
